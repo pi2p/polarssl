@@ -30,7 +30,7 @@ install(TARGETS selftest benchmark ssl_test ssl_cert_test
 
 if(OPENSSL_FOUND)
 	if(ENABLE_LIBDL)
-		set(libs ${libs} dl)
+		set(libs ${libs} ${CMAKE_DL_LIBS})
 	endif(ENABLE_LIBDL)
 	
     add_executable(o_p_test o_p_test.c)
